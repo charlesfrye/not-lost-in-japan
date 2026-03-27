@@ -1,0 +1,4496 @@
+{
+  "source": "OpenFlights Database",
+  "license": "https://openflights.org/data.html",
+  "description": "All direct international flights to Japan",
+  "lastUpdated": "2026-03-26",
+  "stats": {
+    "totalRoutes": 272,
+    "totalAirlines": 77,
+    "japaneseAirports": 94
+  },
+  "airlines": {
+    "JL": "Japan Airlines",
+    "JH": "JH",
+    "QF": "Qantas",
+    "SU": "Aeroflot",
+    "AF": "Air France",
+    "BA": "British Airways",
+    "AC": "Air Canada",
+    "SB": "SB",
+    "OM": "OM",
+    "TK": "Turkish Airlines",
+    "AI": "AI",
+    "7C": "Jeju Air",
+    "VN": "Vietnam Airlines",
+    "5J": "Cebu Pacific",
+    "QR": "Qatar Airways",
+    "CX": "Cathay Pacific",
+    "VS": "VS",
+    "AM": "AM",
+    "CI": "China Airlines",
+    "AE": "Air France",
+    "9W": "9W",
+    "CA": "Air China",
+    "AB": "AB",
+    "MH": "Malaysia Airlines",
+    "KL": "KLM",
+    "BR": "EVA Air",
+    "AY": "Finnair",
+    "SC": "SC",
+    "OZ": "Asiana Airlines",
+    "PX": "PX",
+    "MM": "Peach Aviation",
+    "S7": "S7 Airlines",
+    "ZH": "Shenzhen Airlines",
+    "KA": "Dragonair",
+    "KE": "Korean Air",
+    "HA": "Hawaiian Airlines",
+    "HZ": "HZ",
+    "TN": "Air Tahiti Nui",
+    "GE": "TransAsia Airways",
+    "BX": "Air Busan",
+    "ZE": "Eastar Jet",
+    "HX": "Hong Kong Airlines",
+    "EK": "Emirates",
+    "JW": "Vanilla Air",
+    "GA": "Garuda Indonesia",
+    "NH": "All Nippon Airways",
+    "FM": "Shanghai Airlines",
+    "AZ": "ITA Airways",
+    "TW": "T'way Air",
+    "MU": "China Eastern",
+    "TZ": "Scoot",
+    "LJ": "Jin Air",
+    "AA": "American Airlines",
+    "SK": "SAS",
+    "UO": "HK Express",
+    "HO": "Juneyao Airlines",
+    "PG": "Bangkok Airways",
+    "JQ": "Jetstar",
+    "PK": "Pakistan International",
+    "9C": "Spring Airlines",
+    "HY": "HY",
+    "OS": "Austrian",
+    "NX": "Air Macau",
+    "EY": "Etihad",
+    "LX": "SWISS",
+    "D7": "AirAsia X",
+    "UA": "United Airlines",
+    "NZ": "NZ",
+    "UL": "SriLankan Airlines",
+    "DL": "Delta Air Lines",
+    "3K": "Jetstar Asia",
+    "SQ": "Singapore Airlines",
+    "PR": "Philippine Airlines",
+    "CZ": "China Southern",
+    "TG": "Thai Airways",
+    "LH": "Lufthansa",
+    "US": "US"
+  },
+  "airports": {
+    "NRT": {
+      "city": "Tokyo",
+      "name": "Narita International Airport",
+      "country": "Japan"
+    },
+    "MMJ": {
+      "city": "Matsumoto",
+      "name": "Matsumoto Airport",
+      "country": "Japan"
+    },
+    "IBR": {
+      "city": "Ibaraki",
+      "name": "Hyakuri Airport",
+      "country": "Japan"
+    },
+    "MUS": {
+      "city": "Minami Tori Shima",
+      "name": "Minami Torishima Airport",
+      "country": "Japan"
+    },
+    "IWO": {
+      "city": "Iwojima",
+      "name": "Iwo Jima Airport",
+      "country": "Japan"
+    },
+    "SHM": {
+      "city": "Nanki-shirahama",
+      "name": "Nanki Shirahama Airport",
+      "country": "Japan"
+    },
+    "OBO": {
+      "city": "Obihiro",
+      "name": "Tokachi-Obihiro Airport",
+      "country": "Japan"
+    },
+    "CTS": {
+      "city": "Sapporo",
+      "name": "New Chitose Airport",
+      "country": "Japan"
+    },
+    "HKD": {
+      "city": "Hakodate",
+      "name": "Hakodate Airport",
+      "country": "Japan"
+    },
+    "MMB": {
+      "city": "Memanbetsu",
+      "name": "Memanbetsu Airport",
+      "country": "Japan"
+    },
+    "SHB": {
+      "city": "Nakashibetsu",
+      "name": "Nakashibetsu Airport",
+      "country": "Japan"
+    },
+    "WKJ": {
+      "city": "Wakkanai",
+      "name": "Wakkanai Airport",
+      "country": "Japan"
+    },
+    "IKI": {
+      "city": "Iki",
+      "name": "Iki Airport",
+      "country": "Japan"
+    },
+    "UBJ": {
+      "city": "Yamaguchi",
+      "name": "Yamaguchi Ube Airport",
+      "country": "Japan"
+    },
+    "TSJ": {
+      "city": "Tsushima",
+      "name": "Tsushima Airport",
+      "country": "Japan"
+    },
+    "MBE": {
+      "city": "Monbetsu",
+      "name": "Monbetsu Airport",
+      "country": "Japan"
+    },
+    "AKJ": {
+      "city": "Asahikawa",
+      "name": "Asahikawa Airport",
+      "country": "Japan"
+    },
+    "OIR": {
+      "city": "Okushiri",
+      "name": "Okushiri Airport",
+      "country": "Japan"
+    },
+    "RIS": {
+      "city": "Rishiri Island",
+      "name": "Rishiri Airport",
+      "country": "Japan"
+    },
+    "KUM": {
+      "city": "Yakushima",
+      "name": "Yakushima Airport",
+      "country": "Japan"
+    },
+    "FUJ": {
+      "city": "Fukue",
+      "name": "Fukue Airport",
+      "country": "Japan"
+    },
+    "FUK": {
+      "city": "Fukuoka",
+      "name": "Fukuoka Airport",
+      "country": "Japan"
+    },
+    "TNE": {
+      "city": "Tanegashima",
+      "name": "New Tanegashima Airport",
+      "country": "Japan"
+    },
+    "KOJ": {
+      "city": "Kagoshima",
+      "name": "Kagoshima Airport",
+      "country": "Japan"
+    },
+    "KMI": {
+      "city": "Miyazaki",
+      "name": "Miyazaki Airport",
+      "country": "Japan"
+    },
+    "OIT": {
+      "city": "Oita",
+      "name": "Oita Airport",
+      "country": "Japan"
+    },
+    "KKJ": {
+      "city": "Kitakyushu",
+      "name": "Kitaky\u016bsh\u016b Airport",
+      "country": "Japan"
+    },
+    "KMJ": {
+      "city": "Kumamoto",
+      "name": "Kumamoto Airport",
+      "country": "Japan"
+    },
+    "NGS": {
+      "city": "Nagasaki",
+      "name": "Nagasaki Airport",
+      "country": "Japan"
+    },
+    "ASJ": {
+      "city": "Amami",
+      "name": "Amami Airport",
+      "country": "Japan"
+    },
+    "OKE": {
+      "city": "Okierabu",
+      "name": "Okierabu Airport",
+      "country": "Japan"
+    },
+    "TKN": {
+      "city": "Tokunoshima",
+      "name": "Tokunoshima Airport",
+      "country": "Japan"
+    },
+    "FKJ": {
+      "city": "Fukui",
+      "name": "Fukui Airport",
+      "country": "Japan"
+    },
+    "QGU": {
+      "city": "Gifu",
+      "name": "Gifu Airport",
+      "country": "Japan"
+    },
+    "KMQ": {
+      "city": "Kanazawa",
+      "name": "Komatsu Airport",
+      "country": "Japan"
+    },
+    "OKI": {
+      "city": "Oki Island",
+      "name": "Oki Airport",
+      "country": "Japan"
+    },
+    "TOY": {
+      "city": "Toyama",
+      "name": "Toyama Airport",
+      "country": "Japan"
+    },
+    "HIJ": {
+      "city": "Hiroshima",
+      "name": "Hiroshima Airport",
+      "country": "Japan"
+    },
+    "OKJ": {
+      "city": "Okayama",
+      "name": "Okayama Airport",
+      "country": "Japan"
+    },
+    "IZO": {
+      "city": "Izumo",
+      "name": "Izumo Airport",
+      "country": "Japan"
+    },
+    "YGJ": {
+      "city": "Miho",
+      "name": "Miho Yonago Airport",
+      "country": "Japan"
+    },
+    "KCZ": {
+      "city": "Kochi",
+      "name": "K\u014dchi Ry\u014dma Airport",
+      "country": "Japan"
+    },
+    "MYJ": {
+      "city": "Matsuyama",
+      "name": "Matsuyama Airport",
+      "country": "Japan"
+    },
+    "ITM": {
+      "city": "Osaka",
+      "name": "Osaka International Airport",
+      "country": "Japan"
+    },
+    "TTJ": {
+      "city": "Tottori",
+      "name": "Tottori Airport",
+      "country": "Japan"
+    },
+    "TKS": {
+      "city": "Tokushima",
+      "name": "Tokushima Airport/JMSDF Air Base",
+      "country": "Japan"
+    },
+    "TAK": {
+      "city": "Takamatsu",
+      "name": "Takamatsu Airport",
+      "country": "Japan"
+    },
+    "AOJ": {
+      "city": "Aomori",
+      "name": "Aomori Airport",
+      "country": "Japan"
+    },
+    "GAJ": {
+      "city": "Yamagata",
+      "name": "Yamagata Airport",
+      "country": "Japan"
+    },
+    "SDS": {
+      "city": "Sado",
+      "name": "Sado Airport",
+      "country": "Japan"
+    },
+    "HHE": {
+      "city": "Hachinoe",
+      "name": "Hachinohe Airport",
+      "country": "Japan"
+    },
+    "HNA": {
+      "city": "Hanamaki",
+      "name": "Hanamaki Airport",
+      "country": "Japan"
+    },
+    "AXT": {
+      "city": "Akita",
+      "name": "Akita Airport",
+      "country": "Japan"
+    },
+    "MSJ": {
+      "city": "Misawa",
+      "name": "Misawa Air Base",
+      "country": "Japan"
+    },
+    "SDJ": {
+      "city": "Sendai",
+      "name": "Sendai Airport",
+      "country": "Japan"
+    },
+    "NJA": {
+      "city": "Atsugi",
+      "name": "Atsugi Naval Air Facility",
+      "country": "Japan"
+    },
+    "HAC": {
+      "city": "Hachijojima",
+      "name": "Hachijojima Airport",
+      "country": "Japan"
+    },
+    "OIM": {
+      "city": "Oshima",
+      "name": "Oshima Airport",
+      "country": "Japan"
+    },
+    "HND": {
+      "city": "Tokyo",
+      "name": "Tokyo Haneda International Airport",
+      "country": "Japan"
+    },
+    "OKO": {
+      "city": "Yokota",
+      "name": "Yokota Air Base",
+      "country": "Japan"
+    },
+    "OKA": {
+      "city": "Okinawa",
+      "name": "Naha Airport",
+      "country": "Japan"
+    },
+    "DNA": {
+      "city": "Kadena",
+      "name": "Kadena Air Base",
+      "country": "Japan"
+    },
+    "ISG": {
+      "city": "Ishigaki",
+      "name": "New Ishigaki Airport",
+      "country": "Japan"
+    },
+    "UEO": {
+      "city": "Kumejima",
+      "name": "Kumejima Airport",
+      "country": "Japan"
+    },
+    "MMD": {
+      "city": "Minami Daito",
+      "name": "Minami-Daito Airport",
+      "country": "Japan"
+    },
+    "MMY": {
+      "city": "Miyako",
+      "name": "Miyako Airport",
+      "country": "Japan"
+    },
+    "KTD": {
+      "city": "Kitadaito",
+      "name": "Kitadaito Airport",
+      "country": "Japan"
+    },
+    "SHI": {
+      "city": "Shimojishima",
+      "name": "Shimojishima Airport",
+      "country": "Japan"
+    },
+    "TRA": {
+      "city": "Tarama",
+      "name": "Tarama Airport",
+      "country": "Japan"
+    },
+    "RNJ": {
+      "city": "Yoron",
+      "name": "Yoron Airport",
+      "country": "Japan"
+    },
+    "OGN": {
+      "city": "Yonaguni Jima",
+      "name": "Yonaguni Airport",
+      "country": "Japan"
+    },
+    "NTQ": {
+      "city": "Wajima",
+      "name": "Noto Airport",
+      "country": "Japan"
+    },
+    "NGO": {
+      "city": "Nagoya",
+      "name": "Chubu Centrair International Airport",
+      "country": "Japan"
+    },
+    "UKB": {
+      "city": "Kobe",
+      "name": "Kobe Airport",
+      "country": "Japan"
+    },
+    "KIX": {
+      "city": "Osaka",
+      "name": "Kansai International Airport",
+      "country": "Japan"
+    },
+    "KIJ": {
+      "city": "Niigata",
+      "name": "Niigata Airport",
+      "country": "Japan"
+    },
+    "KUH": {
+      "city": "Kushiro",
+      "name": "Kushiro Airport",
+      "country": "Japan"
+    },
+    "OKD": {
+      "city": "Sapporo",
+      "name": "Okadama Airport",
+      "country": "Japan"
+    },
+    "HSG": {
+      "city": "Saga",
+      "name": "Saga Airport",
+      "country": "Japan"
+    },
+    "NKM": {
+      "city": "Nagoya",
+      "name": "Nagoya Airport",
+      "country": "Japan"
+    },
+    "IWJ": {
+      "city": "Iwami",
+      "name": "Iwami Airport",
+      "country": "Japan"
+    },
+    "FKS": {
+      "city": "Fukushima",
+      "name": "Fukushima Airport",
+      "country": "Japan"
+    },
+    "ONJ": {
+      "city": "Odate Noshiro",
+      "name": "Odate Noshiro Airport",
+      "country": "Japan"
+    },
+    "SYO": {
+      "city": "Shonai",
+      "name": "Shonai Airport",
+      "country": "Japan"
+    },
+    "MYE": {
+      "city": "Miyakejima",
+      "name": "Miyakejima Airport",
+      "country": "Japan"
+    },
+    "TJH": {
+      "city": "Toyooka",
+      "name": "Tajima Airport",
+      "country": "Japan"
+    },
+    "AXJ": {
+      "city": "Amakusa",
+      "name": "Amakusa Airport",
+      "country": "Japan"
+    },
+    "KKX": {
+      "city": "Kikai",
+      "name": "Kikai Airport",
+      "country": "Japan"
+    },
+    "AGJ": {
+      "city": "Aguni",
+      "name": "Aguni Airport",
+      "country": "Japan"
+    },
+    "HIW": {
+      "city": "Hiroshima",
+      "name": "Hiroshimanishi Airport",
+      "country": "Japan"
+    },
+    "KJP": {
+      "city": "Kerama",
+      "name": "Kerama Airport",
+      "country": "Japan"
+    },
+    "HTR": {
+      "city": "Taketomi",
+      "name": "Hateruma Airport",
+      "country": "Japan"
+    },
+    "IWK": {
+      "city": "Iwakuni",
+      "name": "Iwakuni Marine Corps Air Station",
+      "country": "Japan"
+    },
+    "IEJ": {
+      "city": "Ie",
+      "name": "Ie Jima Airport",
+      "country": "Japan"
+    }
+  },
+  "routes": [
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "AXT",
+      "toCity": "Akita",
+      "toAirport": "Akita Airport",
+      "direct": true,
+      "airlines": [
+        "KE"
+      ],
+      "count": 1
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "AOJ",
+      "toCity": "Aomori",
+      "toAirport": "Aomori Airport",
+      "direct": true,
+      "airlines": [
+        "KE"
+      ],
+      "count": 1
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "AKJ",
+      "toCity": "Asahikawa",
+      "toAirport": "Asahikawa Airport",
+      "direct": true,
+      "airlines": [
+        "BR",
+        "GE",
+        "NH"
+      ],
+      "count": 3
+    },
+    {
+      "from": "AMS",
+      "fromCity": "Amsterdam",
+      "fromCountry": "Netherlands",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "KL"
+      ],
+      "count": 1
+    },
+    {
+      "from": "BKK",
+      "fromCity": "Bangkok",
+      "fromCountry": "Thailand",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "TG"
+      ],
+      "count": 2
+    },
+    {
+      "from": "CAN",
+      "fromCity": "Guangzhou",
+      "fromCountry": "China",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "CZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "CJU",
+      "fromCity": "Cheju",
+      "fromCountry": "South Korea",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "OZ"
+      ],
+      "count": 2
+    },
+    {
+      "from": "DLC",
+      "fromCity": "Dalian",
+      "fromCountry": "China",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "FSZ",
+      "fromCity": "",
+      "fromCountry": "",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "JH"
+      ],
+      "count": 1
+    },
+    {
+      "from": "GUM",
+      "fromCity": "Agana",
+      "fromCountry": "Guam",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "UA"
+      ],
+      "count": 2
+    },
+    {
+      "from": "HAN",
+      "fromCity": "Hanoi",
+      "fromCountry": "Vietnam",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "VN"
+      ],
+      "count": 2
+    },
+    {
+      "from": "HKG",
+      "fromCity": "Hong Kong",
+      "fromCountry": "Hong Kong",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "CX",
+        "KA",
+        "UO"
+      ],
+      "count": 3
+    },
+    {
+      "from": "HNL",
+      "fromCity": "Honolulu",
+      "fromCountry": "United States",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "DL",
+        "HA"
+      ],
+      "count": 2
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "7C",
+        "JL",
+        "KE",
+        "NH",
+        "OZ",
+        "TK",
+        "TW"
+      ],
+      "count": 7
+    },
+    {
+      "from": "MFM",
+      "fromCity": "Macau",
+      "fromCountry": "Macau",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "NX"
+      ],
+      "count": 1
+    },
+    {
+      "from": "MNL",
+      "fromCity": "Manila",
+      "fromCountry": "Philippines",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "PR"
+      ],
+      "count": 1
+    },
+    {
+      "from": "PUS",
+      "fromCity": "Busan",
+      "fromCountry": "South Korea",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "BX",
+        "KE",
+        "OZ"
+      ],
+      "count": 3
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "JL",
+        "MU"
+      ],
+      "count": 3
+    },
+    {
+      "from": "SGN",
+      "fromCity": "Ho Chi Minh City",
+      "fromCountry": "Vietnam",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "VN"
+      ],
+      "count": 2
+    },
+    {
+      "from": "SHE",
+      "fromCity": "Shenyang",
+      "fromCountry": "China",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "CZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "SIN",
+      "fromCity": "Singapore",
+      "fromCountry": "Singapore",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "SQ"
+      ],
+      "count": 2
+    },
+    {
+      "from": "TAO",
+      "fromCity": "Qingdao",
+      "fromCountry": "China",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "FUK",
+      "toCity": "Fukuoka",
+      "toAirport": "Fukuoka Airport",
+      "direct": true,
+      "airlines": [
+        "BR",
+        "CI",
+        "CX",
+        "JL",
+        "NH"
+      ],
+      "count": 5
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "HKD",
+      "toCity": "Hakodate",
+      "toAirport": "Hakodate Airport",
+      "direct": true,
+      "airlines": [
+        "BR",
+        "GE",
+        "NH"
+      ],
+      "count": 3
+    },
+    {
+      "from": "DLC",
+      "fromCity": "Dalian",
+      "fromCountry": "China",
+      "to": "HIJ",
+      "toCity": "Hiroshima",
+      "toAirport": "Hiroshima Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "HIJ",
+      "toCity": "Hiroshima",
+      "toAirport": "Hiroshima Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "OZ",
+        "TK"
+      ],
+      "count": 3
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "HIJ",
+      "toCity": "Hiroshima",
+      "toAirport": "Hiroshima Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "HIJ",
+      "toCity": "Hiroshima",
+      "toAirport": "Hiroshima Airport",
+      "direct": true,
+      "airlines": [
+        "CI"
+      ],
+      "count": 1
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "IBR",
+      "toCity": "Ibaraki",
+      "toAirport": "Hyakuri Airport",
+      "direct": true,
+      "airlines": [
+        "9C"
+      ],
+      "count": 1
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "ISG",
+      "toCity": "Ishigaki",
+      "toAirport": "New Ishigaki Airport",
+      "direct": true,
+      "airlines": [
+        "CI",
+        "GE"
+      ],
+      "count": 2
+    },
+    {
+      "from": "FSZ",
+      "fromCity": "",
+      "fromCountry": "",
+      "to": "KOJ",
+      "toCity": "Kagoshima",
+      "toAirport": "Kagoshima Airport",
+      "direct": true,
+      "airlines": [
+        "JH"
+      ],
+      "count": 1
+    },
+    {
+      "from": "HKG",
+      "fromCity": "Hong Kong",
+      "fromCountry": "Hong Kong",
+      "to": "KOJ",
+      "toCity": "Kagoshima",
+      "toAirport": "Kagoshima Airport",
+      "direct": true,
+      "airlines": [
+        "HX"
+      ],
+      "count": 1
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "KOJ",
+      "toCity": "Kagoshima",
+      "toAirport": "Kagoshima Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "KE"
+      ],
+      "count": 2
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "KOJ",
+      "toCity": "Kagoshima",
+      "toAirport": "Kagoshima Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "KOJ",
+      "toCity": "Kagoshima",
+      "toAirport": "Kagoshima Airport",
+      "direct": true,
+      "airlines": [
+        "CI"
+      ],
+      "count": 1
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "KMQ",
+      "toCity": "Kanazawa",
+      "toAirport": "Komatsu Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "KE"
+      ],
+      "count": 2
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "KMQ",
+      "toCity": "Kanazawa",
+      "toAirport": "Komatsu Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "KMQ",
+      "toCity": "Kanazawa",
+      "toAirport": "Komatsu Airport",
+      "direct": true,
+      "airlines": [
+        "BR",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "KMJ",
+      "toCity": "Kumamoto",
+      "toAirport": "Kumamoto Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "OZ"
+      ],
+      "count": 2
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "KUH",
+      "toCity": "Kushiro",
+      "toAirport": "Kushiro Airport",
+      "direct": true,
+      "airlines": [
+        "GE"
+      ],
+      "count": 1
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "MYJ",
+      "toCity": "Matsuyama",
+      "toAirport": "Matsuyama Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "OZ"
+      ],
+      "count": 2
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "MYJ",
+      "toCity": "Matsuyama",
+      "toAirport": "Matsuyama Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "YGJ",
+      "toCity": "Miho",
+      "toAirport": "Miho Yonago Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "OZ"
+      ],
+      "count": 2
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "KMI",
+      "toCity": "Miyazaki",
+      "toAirport": "Miyazaki Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "OZ"
+      ],
+      "count": 2
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "KMI",
+      "toCity": "Miyazaki",
+      "toAirport": "Miyazaki Airport",
+      "direct": true,
+      "airlines": [
+        "CI"
+      ],
+      "count": 1
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "NGS",
+      "toCity": "Nagasaki",
+      "toAirport": "Nagasaki Airport",
+      "direct": true,
+      "airlines": [
+        "LJ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "NGS",
+      "toCity": "Nagasaki",
+      "toAirport": "Nagasaki Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "BKK",
+      "fromCity": "Bangkok",
+      "fromCountry": "Thailand",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "TG"
+      ],
+      "count": 2
+    },
+    {
+      "from": "CJU",
+      "fromCity": "Cheju",
+      "fromCountry": "South Korea",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "KE"
+      ],
+      "count": 1
+    },
+    {
+      "from": "DLC",
+      "fromCity": "Dalian",
+      "fromCountry": "China",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "CZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "DTW",
+      "fromCity": "Detroit",
+      "fromCountry": "United States",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "DL"
+      ],
+      "count": 1
+    },
+    {
+      "from": "FRA",
+      "fromCity": "Frankfurt",
+      "fromCountry": "Germany",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "LH",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "GMP",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "7C"
+      ],
+      "count": 1
+    },
+    {
+      "from": "GUM",
+      "fromCity": "Agana",
+      "fromCountry": "Guam",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "DL",
+        "NH",
+        "UA"
+      ],
+      "count": 3
+    },
+    {
+      "from": "HAN",
+      "fromCity": "Hanoi",
+      "fromCountry": "Vietnam",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "VN"
+      ],
+      "count": 2
+    },
+    {
+      "from": "HEL",
+      "fromCity": "Helsinki",
+      "fromCountry": "Finland",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "AY",
+        "JL"
+      ],
+      "count": 2
+    },
+    {
+      "from": "HKG",
+      "fromCity": "Hong Kong",
+      "fromCountry": "Hong Kong",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "CX",
+        "JL",
+        "NH"
+      ],
+      "count": 3
+    },
+    {
+      "from": "HNL",
+      "fromCity": "Honolulu",
+      "fromCountry": "United States",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "DL",
+        "JL"
+      ],
+      "count": 3
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "7C",
+        "JL",
+        "KE",
+        "NH",
+        "OZ",
+        "TK"
+      ],
+      "count": 6
+    },
+    {
+      "from": "KUL",
+      "fromCity": "Kuala Lumpur",
+      "fromCountry": "Malaysia",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "D7"
+      ],
+      "count": 1
+    },
+    {
+      "from": "MNL",
+      "fromCity": "Manila",
+      "fromCountry": "Philippines",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "5J",
+        "DL",
+        "PR"
+      ],
+      "count": 3
+    },
+    {
+      "from": "PEK",
+      "fromCity": "Beijing",
+      "fromCountry": "China",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "AB",
+        "CA",
+        "EY",
+        "NH"
+      ],
+      "count": 4
+    },
+    {
+      "from": "PUS",
+      "fromCity": "Busan",
+      "fromCountry": "South Korea",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "KE"
+      ],
+      "count": 2
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "CZ",
+        "JL",
+        "MU",
+        "NH"
+      ],
+      "count": 5
+    },
+    {
+      "from": "SGN",
+      "fromCity": "Ho Chi Minh City",
+      "fromCountry": "Vietnam",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "VN"
+      ],
+      "count": 1
+    },
+    {
+      "from": "SHE",
+      "fromCity": "Shenyang",
+      "fromCountry": "China",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "CZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "SIN",
+      "fromCity": "Singapore",
+      "fromCountry": "Singapore",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "SQ"
+      ],
+      "count": 2
+    },
+    {
+      "from": "SPN",
+      "fromCity": "Saipan",
+      "fromCountry": "Northern Mariana Islands",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "DL"
+      ],
+      "count": 1
+    },
+    {
+      "from": "TAO",
+      "fromCity": "Qingdao",
+      "fromCountry": "China",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "CI",
+        "CX",
+        "JL"
+      ],
+      "count": 3
+    },
+    {
+      "from": "TSN",
+      "fromCity": "Tianjin",
+      "fromCountry": "China",
+      "to": "NGO",
+      "toCity": "Nagoya",
+      "toAirport": "Chubu Centrair International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "HRB",
+      "fromCity": "Harbin",
+      "fromCountry": "China",
+      "to": "KIJ",
+      "toCity": "Niigata",
+      "toAirport": "Niigata Airport",
+      "direct": true,
+      "airlines": [
+        "CZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "KIJ",
+      "toCity": "Niigata",
+      "toAirport": "Niigata Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "KE"
+      ],
+      "count": 2
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "KIJ",
+      "toCity": "Niigata",
+      "toAirport": "Niigata Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "OIT",
+      "toCity": "Oita",
+      "toAirport": "Oita Airport",
+      "direct": true,
+      "airlines": [
+        "KE"
+      ],
+      "count": 1
+    },
+    {
+      "from": "GUM",
+      "fromCity": "Agana",
+      "fromCountry": "Guam",
+      "to": "OKJ",
+      "toCity": "Okayama",
+      "toAirport": "Okayama Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "UA"
+      ],
+      "count": 2
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "OKJ",
+      "toCity": "Okayama",
+      "toAirport": "Okayama Airport",
+      "direct": true,
+      "airlines": [
+        "KE"
+      ],
+      "count": 1
+    },
+    {
+      "from": "MFM",
+      "fromCity": "Macau",
+      "fromCountry": "Macau",
+      "to": "OKJ",
+      "toCity": "Okayama",
+      "toAirport": "Okayama Airport",
+      "direct": true,
+      "airlines": [
+        "NX"
+      ],
+      "count": 1
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "OKJ",
+      "toCity": "Okayama",
+      "toAirport": "Okayama Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "OKJ",
+      "toCity": "Okayama",
+      "toAirport": "Okayama Airport",
+      "direct": true,
+      "airlines": [
+        "BR",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "FSZ",
+      "fromCity": "",
+      "fromCountry": "",
+      "to": "OKA",
+      "toCity": "Okinawa",
+      "toAirport": "Naha Airport",
+      "direct": true,
+      "airlines": [
+        "NH"
+      ],
+      "count": 1
+    },
+    {
+      "from": "HKG",
+      "fromCity": "Hong Kong",
+      "fromCountry": "Hong Kong",
+      "to": "OKA",
+      "toCity": "Okinawa",
+      "toAirport": "Naha Airport",
+      "direct": true,
+      "airlines": [
+        "CX",
+        "HX",
+        "KA"
+      ],
+      "count": 3
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "OKA",
+      "toCity": "Okinawa",
+      "toAirport": "Naha Airport",
+      "direct": true,
+      "airlines": [
+        "LJ",
+        "NH",
+        "OZ"
+      ],
+      "count": 3
+    },
+    {
+      "from": "KHH",
+      "fromCity": "Kaohsiung",
+      "fromCountry": "Taiwan",
+      "to": "OKA",
+      "toCity": "Okinawa",
+      "toAirport": "Naha Airport",
+      "direct": true,
+      "airlines": [
+        "CI"
+      ],
+      "count": 1
+    },
+    {
+      "from": "PEK",
+      "fromCity": "Beijing",
+      "fromCountry": "China",
+      "to": "OKA",
+      "toCity": "Okinawa",
+      "toAirport": "Naha Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "PUS",
+      "fromCity": "Busan",
+      "fromCountry": "South Korea",
+      "to": "OKA",
+      "toCity": "Okinawa",
+      "toAirport": "Naha Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "OZ"
+      ],
+      "count": 2
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "OKA",
+      "toCity": "Okinawa",
+      "toAirport": "Naha Airport",
+      "direct": true,
+      "airlines": [
+        "HO",
+        "JL",
+        "MU"
+      ],
+      "count": 3
+    },
+    {
+      "from": "RMQ",
+      "fromCity": "Taichung",
+      "fromCountry": "Taiwan",
+      "to": "OKA",
+      "toCity": "Okinawa",
+      "toAirport": "Naha Airport",
+      "direct": true,
+      "airlines": [
+        "AE"
+      ],
+      "count": 1
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "OKA",
+      "toCity": "Okinawa",
+      "toAirport": "Naha Airport",
+      "direct": true,
+      "airlines": [
+        "CI",
+        "GE",
+        "MM"
+      ],
+      "count": 3
+    },
+    {
+      "from": "AMS",
+      "fromCity": "Amsterdam",
+      "fromCountry": "Netherlands",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "KL"
+      ],
+      "count": 1
+    },
+    {
+      "from": "BKK",
+      "fromCity": "Bangkok",
+      "fromCountry": "Thailand",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "NH",
+        "PG",
+        "TG"
+      ],
+      "count": 4
+    },
+    {
+      "from": "CAN",
+      "fromCity": "Guangzhou",
+      "fromCountry": "China",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "CZ",
+        "JL"
+      ],
+      "count": 2
+    },
+    {
+      "from": "CDG",
+      "fromCity": "Paris",
+      "fromCountry": "France",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "AF"
+      ],
+      "count": 1
+    },
+    {
+      "from": "CGK",
+      "fromCity": "Jakarta",
+      "fromCountry": "Indonesia",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "GA",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "CJU",
+      "fromCity": "Cheju",
+      "fromCountry": "South Korea",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "KE"
+      ],
+      "count": 2
+    },
+    {
+      "from": "CNS",
+      "fromCity": "Cairns",
+      "fromCountry": "Australia",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "JQ",
+        "QF"
+      ],
+      "count": 3
+    },
+    {
+      "from": "DLC",
+      "fromCity": "Dalian",
+      "fromCountry": "China",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "CZ",
+        "NH"
+      ],
+      "count": 3
+    },
+    {
+      "from": "DOH",
+      "fromCity": "Doha",
+      "fromCountry": "Qatar",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "NH",
+        "QR"
+      ],
+      "count": 3
+    },
+    {
+      "from": "DPS",
+      "fromCity": "Denpasar",
+      "fromCountry": "Indonesia",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "GA",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "DXB",
+      "fromCity": "Dubai",
+      "fromCountry": "United Arab Emirates",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "EK",
+        "JL"
+      ],
+      "count": 2
+    },
+    {
+      "from": "FCO",
+      "fromCity": "Rome",
+      "fromCountry": "Italy",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "AZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "FOC",
+      "fromCity": "Fuzhou",
+      "fromCountry": "China",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "ZH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "FRA",
+      "fromCity": "Frankfurt",
+      "fromCountry": "Germany",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "LH",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "GMP",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "7C",
+        "JL",
+        "KE",
+        "NH",
+        "OZ"
+      ],
+      "count": 5
+    },
+    {
+      "from": "GUM",
+      "fromCity": "Agana",
+      "fromCountry": "Guam",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "DL",
+        "KE",
+        "NH",
+        "UA"
+      ],
+      "count": 4
+    },
+    {
+      "from": "HAN",
+      "fromCity": "Hanoi",
+      "fromCountry": "Vietnam",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "VN"
+      ],
+      "count": 2
+    },
+    {
+      "from": "HEL",
+      "fromCity": "Helsinki",
+      "fromCountry": "Finland",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "AY",
+        "JL"
+      ],
+      "count": 2
+    },
+    {
+      "from": "HGH",
+      "fromCity": "Hangzhou",
+      "fromCountry": "China",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "HKG",
+      "fromCity": "Hong Kong",
+      "fromCountry": "Hong Kong",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "AI",
+        "CX",
+        "JL",
+        "MM",
+        "NH",
+        "UO"
+      ],
+      "count": 6
+    },
+    {
+      "from": "HNL",
+      "fromCity": "Honolulu",
+      "fromCountry": "United States",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "DL",
+        "HA",
+        "JL"
+      ],
+      "count": 4
+    },
+    {
+      "from": "HRB",
+      "fromCity": "Harbin",
+      "fromCountry": "China",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "CZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "7C",
+        "JL",
+        "KE",
+        "MM",
+        "NH",
+        "OZ",
+        "ZE"
+      ],
+      "count": 7
+    },
+    {
+      "from": "IST",
+      "fromCity": "Istanbul",
+      "fromCountry": "Turkey",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "TK"
+      ],
+      "count": 2
+    },
+    {
+      "from": "JFK",
+      "fromCity": "New York",
+      "fromCountry": "United States",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "CI"
+      ],
+      "count": 1
+    },
+    {
+      "from": "KHH",
+      "fromCity": "Kaohsiung",
+      "fromCountry": "Taiwan",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "CI",
+        "MM"
+      ],
+      "count": 2
+    },
+    {
+      "from": "KUL",
+      "fromCity": "Kuala Lumpur",
+      "fromCountry": "Malaysia",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "D7",
+        "JL",
+        "MH"
+      ],
+      "count": 3
+    },
+    {
+      "from": "MFM",
+      "fromCity": "Macau",
+      "fromCountry": "Macau",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "NX"
+      ],
+      "count": 2
+    },
+    {
+      "from": "MNL",
+      "fromCity": "Manila",
+      "fromCountry": "Philippines",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "3K",
+        "5J",
+        "PR"
+      ],
+      "count": 3
+    },
+    {
+      "from": "NKG",
+      "fromCity": "Nanjing",
+      "fromCountry": "China",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "NOU",
+      "fromCity": "Noumea",
+      "fromCountry": "New Caledonia",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "SB"
+      ],
+      "count": 1
+    },
+    {
+      "from": "OOL",
+      "fromCity": "Coolangatta",
+      "fromCountry": "Australia",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "JQ",
+        "QF"
+      ],
+      "count": 3
+    },
+    {
+      "from": "PEK",
+      "fromCity": "Beijing",
+      "fromCountry": "China",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "PUS",
+      "fromCity": "Busan",
+      "fromCountry": "South Korea",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "BX",
+        "JL",
+        "KE",
+        "MM",
+        "OZ"
+      ],
+      "count": 5
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "9C",
+        "CA",
+        "FM",
+        "HO",
+        "JL",
+        "MU",
+        "NH"
+      ],
+      "count": 7
+    },
+    {
+      "from": "RMQ",
+      "fromCity": "Taichung",
+      "fromCountry": "Taiwan",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "CI"
+      ],
+      "count": 1
+    },
+    {
+      "from": "SFO",
+      "fromCity": "San Francisco",
+      "fromCountry": "United States",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "UA"
+      ],
+      "count": 2
+    },
+    {
+      "from": "SGN",
+      "fromCity": "Ho Chi Minh City",
+      "fromCountry": "Vietnam",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "VN"
+      ],
+      "count": 2
+    },
+    {
+      "from": "SHE",
+      "fromCity": "Shenyang",
+      "fromCountry": "China",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "CZ",
+        "JL"
+      ],
+      "count": 2
+    },
+    {
+      "from": "SIN",
+      "fromCity": "Singapore",
+      "fromCountry": "Singapore",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "SQ"
+      ],
+      "count": 2
+    },
+    {
+      "from": "SPN",
+      "fromCity": "Saipan",
+      "fromCountry": "Northern Mariana Islands",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "OZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "TAO",
+      "fromCity": "Qingdao",
+      "fromCountry": "China",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "JL",
+        "MU",
+        "NH",
+        "SC"
+      ],
+      "count": 5
+    },
+    {
+      "from": "TNA",
+      "fromCity": "Jinan",
+      "fromCountry": "China",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "NH",
+        "SC"
+      ],
+      "count": 3
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "3K",
+        "BR",
+        "CI",
+        "CX",
+        "GE",
+        "JL",
+        "MM",
+        "NH"
+      ],
+      "count": 8
+    },
+    {
+      "from": "WUX",
+      "fromCity": "Wuxi",
+      "fromCountry": "China",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "ZH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "YNT",
+      "fromCity": "Yantai",
+      "fromCountry": "China",
+      "to": "KIX",
+      "toCity": "Osaka",
+      "toAirport": "Kansai International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "HSG",
+      "toCity": "Saga",
+      "toAirport": "Saga Airport",
+      "direct": true,
+      "airlines": [
+        "TW"
+      ],
+      "count": 1
+    },
+    {
+      "from": "BKK",
+      "fromCity": "Bangkok",
+      "fromCountry": "Thailand",
+      "to": "CTS",
+      "toCity": "Sapporo",
+      "toAirport": "New Chitose Airport",
+      "direct": true,
+      "airlines": [
+        "TG"
+      ],
+      "count": 1
+    },
+    {
+      "from": "FSZ",
+      "fromCity": "",
+      "fromCountry": "",
+      "to": "CTS",
+      "toCity": "Sapporo",
+      "toAirport": "New Chitose Airport",
+      "direct": true,
+      "airlines": [
+        "JH",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "GUM",
+      "fromCity": "Agana",
+      "fromCountry": "Guam",
+      "to": "CTS",
+      "toCity": "Sapporo",
+      "toAirport": "New Chitose Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "UA"
+      ],
+      "count": 2
+    },
+    {
+      "from": "HKG",
+      "fromCity": "Hong Kong",
+      "fromCountry": "Hong Kong",
+      "to": "CTS",
+      "toCity": "Sapporo",
+      "toAirport": "New Chitose Airport",
+      "direct": true,
+      "airlines": [
+        "CX",
+        "JL"
+      ],
+      "count": 2
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "CTS",
+      "toCity": "Sapporo",
+      "toAirport": "New Chitose Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "KE",
+        "LJ",
+        "TW"
+      ],
+      "count": 4
+    },
+    {
+      "from": "PEK",
+      "fromCity": "Beijing",
+      "fromCountry": "China",
+      "to": "CTS",
+      "toCity": "Sapporo",
+      "toAirport": "New Chitose Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "PUS",
+      "fromCity": "Busan",
+      "fromCountry": "South Korea",
+      "to": "CTS",
+      "toCity": "Sapporo",
+      "toAirport": "New Chitose Airport",
+      "direct": true,
+      "airlines": [
+        "KE"
+      ],
+      "count": 1
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "CTS",
+      "toCity": "Sapporo",
+      "toAirport": "New Chitose Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "CTS",
+      "toCity": "Sapporo",
+      "toAirport": "New Chitose Airport",
+      "direct": true,
+      "airlines": [
+        "BR",
+        "CI",
+        "GE",
+        "NH"
+      ],
+      "count": 4
+    },
+    {
+      "from": "UUS",
+      "fromCity": "Yuzhno-sakhalinsk",
+      "fromCountry": "Russia",
+      "to": "CTS",
+      "toCity": "Sapporo",
+      "toAirport": "New Chitose Airport",
+      "direct": true,
+      "airlines": [
+        "HZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "GUM",
+      "fromCity": "Agana",
+      "fromCountry": "Guam",
+      "to": "SDJ",
+      "toCity": "Sendai",
+      "toAirport": "Sendai Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "UA"
+      ],
+      "count": 2
+    },
+    {
+      "from": "HNL",
+      "fromCity": "Honolulu",
+      "fromCountry": "United States",
+      "to": "SDJ",
+      "toCity": "Sendai",
+      "toAirport": "Sendai Airport",
+      "direct": true,
+      "airlines": [
+        "HA"
+      ],
+      "count": 1
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "SDJ",
+      "toCity": "Sendai",
+      "toAirport": "Sendai Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "OZ"
+      ],
+      "count": 2
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "SDJ",
+      "toCity": "Sendai",
+      "toAirport": "Sendai Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "SDJ",
+      "toCity": "Sendai",
+      "toAirport": "Sendai Airport",
+      "direct": true,
+      "airlines": [
+        "BR",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "TAK",
+      "toCity": "Takamatsu",
+      "toAirport": "Takamatsu Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "OZ"
+      ],
+      "count": 2
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "TAK",
+      "toCity": "Takamatsu",
+      "toAirport": "Takamatsu Airport",
+      "direct": true,
+      "airlines": [
+        "9C"
+      ],
+      "count": 1
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "TAK",
+      "toCity": "Takamatsu",
+      "toAirport": "Takamatsu Airport",
+      "direct": true,
+      "airlines": [
+        "CI"
+      ],
+      "count": 1
+    },
+    {
+      "from": "AKL",
+      "fromCity": "Auckland",
+      "fromCountry": "New Zealand",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "NZ",
+        "OZ"
+      ],
+      "count": 3
+    },
+    {
+      "from": "AMS",
+      "fromCity": "Amsterdam",
+      "fromCountry": "Netherlands",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "KL"
+      ],
+      "count": 1
+    },
+    {
+      "from": "ATL",
+      "fromCity": "Atlanta",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "DL"
+      ],
+      "count": 1
+    },
+    {
+      "from": "AUH",
+      "fromCity": "Abu Dhabi",
+      "fromCountry": "United Arab Emirates",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "EY",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "BKI",
+      "fromCity": "Kota Kinabalu",
+      "fromCountry": "Malaysia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "BKK",
+      "fromCity": "Bangkok",
+      "fromCountry": "Thailand",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "NH",
+        "PG",
+        "TG"
+      ],
+      "count": 4
+    },
+    {
+      "from": "BKK",
+      "fromCity": "Bangkok",
+      "fromCountry": "Thailand",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "AC",
+        "DL",
+        "JL",
+        "NH",
+        "PG",
+        "TG",
+        "UA"
+      ],
+      "count": 8
+    },
+    {
+      "from": "BOM",
+      "fromCity": "Mumbai",
+      "fromCountry": "India",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "9W",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "BOS",
+      "fromCity": "Boston",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "JL"
+      ],
+      "count": 2
+    },
+    {
+      "from": "CAN",
+      "fromCity": "Guangzhou",
+      "fromCountry": "China",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "CZ",
+        "JL",
+        "MU",
+        "NH",
+        "ZH"
+      ],
+      "count": 6
+    },
+    {
+      "from": "CDG",
+      "fromCity": "Paris",
+      "fromCountry": "France",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "AF",
+        "JL",
+        "NH"
+      ],
+      "count": 3
+    },
+    {
+      "from": "CDG",
+      "fromCity": "Paris",
+      "fromCountry": "France",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AF",
+        "JL",
+        "NH"
+      ],
+      "count": 3
+    },
+    {
+      "from": "CEB",
+      "fromCity": "Cebu",
+      "fromCountry": "Philippines",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "PR"
+      ],
+      "count": 1
+    },
+    {
+      "from": "CGK",
+      "fromCity": "Jakarta",
+      "fromCountry": "Indonesia",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "GA",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "CGK",
+      "fromCity": "Jakarta",
+      "fromCountry": "Indonesia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "GA",
+        "JL",
+        "NH"
+      ],
+      "count": 3
+    },
+    {
+      "from": "CGQ",
+      "fromCity": "Changchun",
+      "fromCountry": "China",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "CZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "CJU",
+      "fromCity": "Cheju",
+      "fromCountry": "South Korea",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "KE"
+      ],
+      "count": 2
+    },
+    {
+      "from": "CMB",
+      "fromCity": "Colombo",
+      "fromCountry": "Sri Lanka",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "UL"
+      ],
+      "count": 1
+    },
+    {
+      "from": "CNS",
+      "fromCity": "Cairns",
+      "fromCountry": "Australia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "JQ",
+        "QF"
+      ],
+      "count": 3
+    },
+    {
+      "from": "CPH",
+      "fromCity": "Copenhagen",
+      "fromCountry": "Denmark",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "SK"
+      ],
+      "count": 1
+    },
+    {
+      "from": "CTU",
+      "fromCity": "Chengdu",
+      "fromCountry": "China",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "DEL",
+      "fromCity": "Delhi",
+      "fromCountry": "India",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AI",
+        "JL",
+        "NH"
+      ],
+      "count": 3
+    },
+    {
+      "from": "DEN",
+      "fromCity": "Denver",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "UA"
+      ],
+      "count": 2
+    },
+    {
+      "from": "DFW",
+      "fromCity": "Dallas-Fort Worth",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "JL",
+        "MH",
+        "US"
+      ],
+      "count": 4
+    },
+    {
+      "from": "DLC",
+      "fromCity": "Dalian",
+      "fromCountry": "China",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "CZ",
+        "JL",
+        "MU",
+        "NH"
+      ],
+      "count": 5
+    },
+    {
+      "from": "DME",
+      "fromCity": "Moscow",
+      "fromCountry": "Russia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "S7"
+      ],
+      "count": 2
+    },
+    {
+      "from": "DOH",
+      "fromCity": "Doha",
+      "fromCountry": "Qatar",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "NH",
+        "QR"
+      ],
+      "count": 3
+    },
+    {
+      "from": "DPS",
+      "fromCity": "Denpasar",
+      "fromCountry": "Indonesia",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "GA",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "DPS",
+      "fromCity": "Denpasar",
+      "fromCountry": "Indonesia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "GA",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "DTW",
+      "fromCity": "Detroit",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "DL"
+      ],
+      "count": 1
+    },
+    {
+      "from": "DUS",
+      "fromCity": "Duesseldorf",
+      "fromCountry": "Germany",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "LH",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "DXB",
+      "fromCity": "Dubai",
+      "fromCountry": "United Arab Emirates",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "EK",
+        "JL"
+      ],
+      "count": 2
+    },
+    {
+      "from": "DXB",
+      "fromCity": "Dubai",
+      "fromCountry": "United Arab Emirates",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "EK",
+        "JL"
+      ],
+      "count": 2
+    },
+    {
+      "from": "EWR",
+      "fromCity": "Newark",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "UA"
+      ],
+      "count": 2
+    },
+    {
+      "from": "FCO",
+      "fromCity": "Rome",
+      "fromCountry": "Italy",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "FRA",
+      "fromCity": "Frankfurt",
+      "fromCountry": "Germany",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "LH",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "FRA",
+      "fromCity": "Frankfurt",
+      "fromCountry": "Germany",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "JL"
+      ],
+      "count": 1
+    },
+    {
+      "from": "GMP",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "KE",
+        "NH",
+        "OZ"
+      ],
+      "count": 4
+    },
+    {
+      "from": "GUM",
+      "fromCity": "Agana",
+      "fromCountry": "Guam",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "DL",
+        "JL",
+        "NH",
+        "UA"
+      ],
+      "count": 4
+    },
+    {
+      "from": "HAN",
+      "fromCity": "Hanoi",
+      "fromCountry": "Vietnam",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "NH"
+      ],
+      "count": 1
+    },
+    {
+      "from": "HAN",
+      "fromCity": "Hanoi",
+      "fromCountry": "Vietnam",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "JL",
+        "VN"
+      ],
+      "count": 3
+    },
+    {
+      "from": "HEL",
+      "fromCity": "Helsinki",
+      "fromCountry": "Finland",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AY",
+        "JL"
+      ],
+      "count": 2
+    },
+    {
+      "from": "HGH",
+      "fromCity": "Hangzhou",
+      "fromCountry": "China",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "HKG",
+      "fromCity": "Hong Kong",
+      "fromCountry": "Hong Kong",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "CX",
+        "JL",
+        "NH",
+        "UO"
+      ],
+      "count": 4
+    },
+    {
+      "from": "HKG",
+      "fromCity": "Hong Kong",
+      "fromCountry": "Hong Kong",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "CX",
+        "DL",
+        "JL",
+        "NH"
+      ],
+      "count": 5
+    },
+    {
+      "from": "HNL",
+      "fromCity": "Honolulu",
+      "fromCountry": "United States",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "HA",
+        "JL",
+        "NH",
+        "UA"
+      ],
+      "count": 5
+    },
+    {
+      "from": "HNL",
+      "fromCity": "Honolulu",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "CI",
+        "DL",
+        "JL",
+        "KE",
+        "NH",
+        "UA"
+      ],
+      "count": 7
+    },
+    {
+      "from": "IAD",
+      "fromCity": "Washington",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "UA"
+      ],
+      "count": 2
+    },
+    {
+      "from": "IAH",
+      "fromCity": "Houston",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "UA"
+      ],
+      "count": 2
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "KE",
+        "NH",
+        "OZ"
+      ],
+      "count": 3
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "7C",
+        "AA",
+        "JL",
+        "JW",
+        "KE",
+        "NH",
+        "OZ",
+        "TN",
+        "UA",
+        "ZE"
+      ],
+      "count": 10
+    },
+    {
+      "from": "IST",
+      "fromCity": "Istanbul",
+      "fromCountry": "Turkey",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "TK"
+      ],
+      "count": 2
+    },
+    {
+      "from": "JFK",
+      "fromCity": "New York",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "DL",
+        "JL",
+        "NH",
+        "UA"
+      ],
+      "count": 5
+    },
+    {
+      "from": "KHH",
+      "fromCity": "Kaohsiung",
+      "fromCountry": "Taiwan",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "BR",
+        "CI",
+        "JL",
+        "NH"
+      ],
+      "count": 5
+    },
+    {
+      "from": "KHV",
+      "fromCity": "Khabarovsk",
+      "fromCountry": "Russia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "S7"
+      ],
+      "count": 2
+    },
+    {
+      "from": "KUL",
+      "fromCity": "Kuala Lumpur",
+      "fromCountry": "Malaysia",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "D7"
+      ],
+      "count": 1
+    },
+    {
+      "from": "KUL",
+      "fromCity": "Kuala Lumpur",
+      "fromCountry": "Malaysia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "JL",
+        "MH"
+      ],
+      "count": 3
+    },
+    {
+      "from": "LAX",
+      "fromCity": "Los Angeles",
+      "fromCountry": "United States",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "DL",
+        "NH",
+        "UA"
+      ],
+      "count": 3
+    },
+    {
+      "from": "LAX",
+      "fromCity": "Los Angeles",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "AI",
+        "DL",
+        "JL",
+        "MH",
+        "NH",
+        "SQ",
+        "UA",
+        "US"
+      ],
+      "count": 9
+    },
+    {
+      "from": "LHR",
+      "fromCity": "London",
+      "fromCountry": "United Kingdom",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "BA",
+        "JL",
+        "NH",
+        "VS"
+      ],
+      "count": 4
+    },
+    {
+      "from": "LHR",
+      "fromCity": "London",
+      "fromCountry": "United Kingdom",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "BA",
+        "JL",
+        "NH",
+        "VS"
+      ],
+      "count": 4
+    },
+    {
+      "from": "MEL",
+      "fromCity": "Melbourne",
+      "fromCountry": "Australia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "JQ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "MFM",
+      "fromCity": "Macau",
+      "fromCountry": "Macau",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "NX"
+      ],
+      "count": 2
+    },
+    {
+      "from": "MNL",
+      "fromCity": "Manila",
+      "fromCountry": "Philippines",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "PR"
+      ],
+      "count": 2
+    },
+    {
+      "from": "MNL",
+      "fromCity": "Manila",
+      "fromCountry": "Philippines",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "5J",
+        "DL",
+        "JL",
+        "NH",
+        "PR"
+      ],
+      "count": 5
+    },
+    {
+      "from": "MSP",
+      "fromCity": "Minneapolis",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "DL"
+      ],
+      "count": 1
+    },
+    {
+      "from": "MUC",
+      "fromCity": "Munich",
+      "fromCountry": "Germany",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "LH",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "MXP",
+      "fromCity": "Milano",
+      "fromCountry": "Italy",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "NKG",
+      "fromCity": "Nanjing",
+      "fromCountry": "China",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "NOU",
+      "fromCity": "Noumea",
+      "fromCountry": "New Caledonia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "SB"
+      ],
+      "count": 1
+    },
+    {
+      "from": "OOL",
+      "fromCity": "Coolangatta",
+      "fromCountry": "Australia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "JQ",
+        "QF"
+      ],
+      "count": 3
+    },
+    {
+      "from": "ORD",
+      "fromCity": "Chicago",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "JL",
+        "MH",
+        "NH",
+        "UA",
+        "US"
+      ],
+      "count": 6
+    },
+    {
+      "from": "PDX",
+      "fromCity": "Portland",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "DL"
+      ],
+      "count": 1
+    },
+    {
+      "from": "PEK",
+      "fromCity": "Beijing",
+      "fromCountry": "China",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "JL",
+        "MU",
+        "NH"
+      ],
+      "count": 4
+    },
+    {
+      "from": "PEK",
+      "fromCity": "Beijing",
+      "fromCountry": "China",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "CZ",
+        "JL",
+        "MU",
+        "NH",
+        "PK"
+      ],
+      "count": 6
+    },
+    {
+      "from": "POM",
+      "fromCity": "Port Moresby",
+      "fromCountry": "Papua New Guinea",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "PX"
+      ],
+      "count": 1
+    },
+    {
+      "from": "PPT",
+      "fromCity": "Papeete",
+      "fromCountry": "French Polynesia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "TN"
+      ],
+      "count": 2
+    },
+    {
+      "from": "PUS",
+      "fromCity": "Busan",
+      "fromCountry": "South Korea",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "BX",
+        "JL",
+        "KE",
+        "OZ"
+      ],
+      "count": 5
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "DL",
+        "JL",
+        "MU",
+        "NH"
+      ],
+      "count": 5
+    },
+    {
+      "from": "RGN",
+      "fromCity": "Yangon",
+      "fromCountry": "Burma",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "NH"
+      ],
+      "count": 1
+    },
+    {
+      "from": "ROR",
+      "fromCity": "Babelthuap",
+      "fromCountry": "Palau",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AF",
+        "DL",
+        "JL"
+      ],
+      "count": 3
+    },
+    {
+      "from": "SAN",
+      "fromCity": "San Diego",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "JL",
+        "MH"
+      ],
+      "count": 3
+    },
+    {
+      "from": "SEA",
+      "fromCity": "Seattle",
+      "fromCountry": "United States",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "DL"
+      ],
+      "count": 1
+    },
+    {
+      "from": "SEA",
+      "fromCity": "Seattle",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "DL",
+        "NH",
+        "UA"
+      ],
+      "count": 3
+    },
+    {
+      "from": "SFO",
+      "fromCity": "San Francisco",
+      "fromCountry": "United States",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "JL"
+      ],
+      "count": 2
+    },
+    {
+      "from": "SFO",
+      "fromCity": "San Francisco",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "UA"
+      ],
+      "count": 2
+    },
+    {
+      "from": "SGN",
+      "fromCity": "Ho Chi Minh City",
+      "fromCountry": "Vietnam",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "JL"
+      ],
+      "count": 1
+    },
+    {
+      "from": "SGN",
+      "fromCity": "Ho Chi Minh City",
+      "fromCountry": "Vietnam",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "JL",
+        "NH",
+        "VN"
+      ],
+      "count": 4
+    },
+    {
+      "from": "SHA",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "FM",
+        "JL",
+        "MU",
+        "NH"
+      ],
+      "count": 5
+    },
+    {
+      "from": "SHE",
+      "fromCity": "Shenyang",
+      "fromCountry": "China",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "CZ",
+        "JL",
+        "NH"
+      ],
+      "count": 4
+    },
+    {
+      "from": "SIN",
+      "fromCity": "Singapore",
+      "fromCountry": "Singapore",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "NH",
+        "QF",
+        "SQ"
+      ],
+      "count": 4
+    },
+    {
+      "from": "SIN",
+      "fromCity": "Singapore",
+      "fromCountry": "Singapore",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "AI",
+        "DL",
+        "JL",
+        "NH",
+        "SQ",
+        "UA",
+        "US"
+      ],
+      "count": 8
+    },
+    {
+      "from": "SJC",
+      "fromCity": "San Jose",
+      "fromCountry": "United States",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "UA"
+      ],
+      "count": 2
+    },
+    {
+      "from": "SPN",
+      "fromCity": "Saipan",
+      "fromCountry": "Northern Mariana Islands",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "DL"
+      ],
+      "count": 1
+    },
+    {
+      "from": "SVO",
+      "fromCity": "Moscow",
+      "fromCountry": "Russia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "SU"
+      ],
+      "count": 1
+    },
+    {
+      "from": "SYD",
+      "fromCity": "Sydney",
+      "fromCountry": "Australia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "QF"
+      ],
+      "count": 2
+    },
+    {
+      "from": "TAO",
+      "fromCity": "Qingdao",
+      "fromCountry": "China",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "NH",
+        "SC"
+      ],
+      "count": 3
+    },
+    {
+      "from": "TAS",
+      "fromCity": "Tashkent",
+      "fromCountry": "Uzbekistan",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "HY"
+      ],
+      "count": 1
+    },
+    {
+      "from": "TIJ",
+      "fromCity": "Tijuana",
+      "fromCountry": "Mexico",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AM",
+        "KE"
+      ],
+      "count": 2
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "CI"
+      ],
+      "count": 1
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "BR",
+        "CI",
+        "CX",
+        "DL",
+        "GE",
+        "JL",
+        "JW",
+        "NH",
+        "TZ"
+      ],
+      "count": 10
+    },
+    {
+      "from": "TSA",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "BR",
+        "CI",
+        "JL",
+        "NH"
+      ],
+      "count": 4
+    },
+    {
+      "from": "ULN",
+      "fromCity": "Ulan Bator",
+      "fromCountry": "Mongolia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "OM"
+      ],
+      "count": 1
+    },
+    {
+      "from": "UUS",
+      "fromCity": "Yuzhno-sakhalinsk",
+      "fromCountry": "Russia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "HZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "VCE",
+      "fromCity": "Venice",
+      "fromCountry": "Italy",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "VIE",
+      "fromCity": "Vienna",
+      "fromCountry": "Austria",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "OS"
+      ],
+      "count": 2
+    },
+    {
+      "from": "VVO",
+      "fromCity": "Vladivostok",
+      "fromCountry": "Russia",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "JL",
+        "S7"
+      ],
+      "count": 2
+    },
+    {
+      "from": "XMN",
+      "fromCity": "Xiamen",
+      "fromCountry": "China",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "CA",
+        "NH",
+        "ZH"
+      ],
+      "count": 3
+    },
+    {
+      "from": "YVR",
+      "fromCity": "Vancouver",
+      "fromCountry": "Canada",
+      "to": "HND",
+      "toCity": "Tokyo",
+      "toAirport": "Tokyo Haneda International Airport",
+      "direct": true,
+      "airlines": [
+        "AC",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "YVR",
+      "fromCity": "Vancouver",
+      "fromCountry": "Canada",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AA",
+        "AC",
+        "JL",
+        "NH"
+      ],
+      "count": 4
+    },
+    {
+      "from": "YYC",
+      "fromCity": "Calgary",
+      "fromCountry": "Canada",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AC",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "YYZ",
+      "fromCity": "Toronto",
+      "fromCountry": "Canada",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "AC",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "ZRH",
+      "fromCity": "Zurich",
+      "fromCountry": "Switzerland",
+      "to": "NRT",
+      "toCity": "Tokyo",
+      "toAirport": "Narita International Airport",
+      "direct": true,
+      "airlines": [
+        "LX",
+        "NH"
+      ],
+      "count": 2
+    },
+    {
+      "from": "DLC",
+      "fromCity": "Dalian",
+      "fromCountry": "China",
+      "to": "TOY",
+      "toCity": "Toyama",
+      "toAirport": "Toyama Airport",
+      "direct": true,
+      "airlines": [
+        "CZ"
+      ],
+      "count": 1
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "TOY",
+      "toCity": "Toyama",
+      "toAirport": "Toyama Airport",
+      "direct": true,
+      "airlines": [
+        "NH",
+        "OZ"
+      ],
+      "count": 2
+    },
+    {
+      "from": "PVG",
+      "fromCity": "Shanghai",
+      "fromCountry": "China",
+      "to": "TOY",
+      "toCity": "Toyama",
+      "toAirport": "Toyama Airport",
+      "direct": true,
+      "airlines": [
+        "FM",
+        "MU"
+      ],
+      "count": 2
+    },
+    {
+      "from": "TPE",
+      "fromCity": "Taipei",
+      "fromCountry": "Taiwan",
+      "to": "TOY",
+      "toCity": "Toyama",
+      "toAirport": "Toyama Airport",
+      "direct": true,
+      "airlines": [
+        "CI"
+      ],
+      "count": 1
+    },
+    {
+      "from": "ICN",
+      "fromCity": "Seoul",
+      "fromCountry": "South Korea",
+      "to": "UBJ",
+      "toCity": "Yamaguchi",
+      "toAirport": "Yamaguchi Ube Airport",
+      "direct": true,
+      "airlines": [
+        "OZ"
+      ],
+      "count": 1
+    }
+  ]
+}

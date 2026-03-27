@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Lost in Japan</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            height: 100vh;
+            display: flex;
+        }
+
+        #sidebar {
+            width: 420px;
+            background: #16213e;
+            padding: 20px;
+            overflow-y: auto;
+            border-right: 1px solid #0f3460;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #e94560;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .lyric {
+            font-style: italic;
+            color: #aaa;
+            font-size: 0.85rem;
+            padding: 10px;
+            background: #0f3460;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 3px solid #e94560;
+        }
+
+        .constraints {
+            margin-bottom: 20px;
+        }
+
+        .constraints h2 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .constraint {
+            background: #1a1a2e;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            border-left: 3px solid #0f3460;
+        }
+
+        .constraint strong {
+            color: #e94560;
+        }
+
+        .destination-selector {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #1a1a2e;
+            border-radius: 8px;
+        }
+
+        .destination-selector h2 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .destination-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .dest-btn {
+            padding: 6px 12px;
+            background: #0f3460;
+            color: #eee;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+
+        .dest-btn:hover {
+            background: #1a3a6e;
+        }
+
+        .dest-btn.active {
+            background: #e94560;
+        }
+
+        .dest-btn .count {
+            font-size: 0.7rem;
+            opacity: 0.7;
+            margin-left: 4px;
+        }
+
+        .cities {
+            margin-top: 20px;
+        }
+
+        .cities h2 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .city-card {
+            background: #1a1a2e;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .city-card:hover {
+            background: #0f3460;
+            border-color: #e94560;
+        }
+
+        .city-card.eliminated {
+            opacity: 0.5;
+            text-decoration: line-through;
+        }
+
+        .city-card.selected {
+            background: #0f3460;
+            border-color: #f39c12;
+        }
+
+        .city-card h3 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .timezone-badge {
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #0f3460;
+        }
+
+        .same-tz {
+            background: #e94560;
+        }
+
+        .different-tz {
+            background: #00b894;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .stat {
+            font-size: 0.75rem;
+            color: #888;
+        }
+
+        .checks {
+            display: flex;
+            gap: 4px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+
+        .check {
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #00b894;
+        }
+
+        .check.fail {
+            background: #e94560;
+        }
+
+        .airlines {
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 6px;
+        }
+
+        .airlines strong {
+            color: #aaa;
+        }
+
+        .destinations-list {
+            font-size: 0.75rem;
+            color: #aaa;
+            margin-top: 6px;
+            padding-top: 6px;
+            border-top: 1px solid #0f3460;
+        }
+
+        .destinations-list strong {
+            color: #e94560;
+        }
+
+        #map {
+            flex: 1;
+            height: 100vh;
+        }
+
+        .info-panel {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #16213e;
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 320px;
+            max-height: 80vh;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+        }
+
+        .info-panel.visible {
+            display: block;
+        }
+
+        .info-panel h3 {
+            color: #e94560;
+            margin-bottom: 10px;
+        }
+
+        .info-panel p {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+            color: #888;
+        }
+
+        .data-source {
+            font-size: 0.7rem;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .legend {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #16213e;
+            padding: 10px 20px;
+            border-radius: 8px;
+            z-index: 1000;
+            display: flex;
+            gap: 20px;
+            font-size: 0.8rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-japan {
+            background: #e94560;
+        }
+
+        .dot-different {
+            background: #00b894;
+        }
+
+        .dot-same {
+            background: #636e72;
+        }
+
+        .dot-destination {
+            background: #f39c12;
+        }
+
+        .buffer-100 {
+            width: 18px;
+            height: 12px;
+            background: rgba(0, 184, 148, 0.3);
+            border: 2px dashed #00b894;
+            border-radius: 2px;
+        }
+
+        .buffer-1000 {
+            width: 18px;
+            height: 12px;
+            background: rgba(155, 89, 182, 0.2);
+            border: 2px dashed #9b59b6;
+            border-radius: 2px;
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -20;
+            }
+        }
+
+        .leaflet-overlay-pane path.flight-path {
+            stroke-dasharray: 10, 10;
+            animation: dash 1s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <h1>Where is Shawn Mendes?</h1>
+        <p class="subtitle">A data-driven investigation</p>
+
+        <div class="lyric">
+            I got an idea<br>
+            And I know that it sounds crazy
+        </div>
+
+        <div class="constraints">
+            <h2>Constraints</h2>
+
+            <div class="constraint">
+                <strong>"One flight, we'd be in the same time zone"</strong><br>
+                Direct flight available to Japan
+            </div>
+
+            <div class="constraint">
+                <strong>"One flight, we'd be in the same time zone"</strong><br>
+                Shawn is NOT currently in Japan's timezone (JST, UTC+9)
+            </div>
+
+            <div class="constraint">
+                <strong>"A couple hundred miles from Japan"</strong><br>
+                Shawn is at least one hundred and at most 1000 miles from Japan, allowing for poetic license.
+            </div>
+
+            <div class="constraint">
+                <strong>"It'd only be a couple hours"</strong><br>
+                Short-haul flight, typically 1.5-4 hours
+            </div>
+        </div>
+
+        <div class="destination-selector">
+            <h2>Destination in Japan</h2>
+            <div class="destination-buttons" id="dest-buttons">
+                <span style="color:#888;font-size:0.8rem;">Loading...</span>
+            </div>
+        </div>
+
+        <div class="cities">
+            <h2>Candidate Cities</h2>
+            <p style="font-size: 0.75rem; color: #888; margin-bottom: 10px;">Click to highlight on map</p>
+            <div id="cities-list"></div>
+        </div>
+
+        <div class="data-source">
+            Flight routes: OpenFlights.org (272 direct routes)
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+    <div class="info-panel" id="info-panel">
+        <span class="close-btn" onclick="closeInfo()">×</span>
+        <h3 id="panel-city"></h3>
+        <div id="panel-content"></div>
+    </div>
+
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-dot dot-destination"></div>
+            <span>Selected</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot dot-japan"></div>
+            <span>Japan</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot dot-different"></div>
+            <span>Valid</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot dot-same"></div>
+            <span>Eliminated</span>
+        </div>
+        <div class="legend-item">
+            <div class="buffer-100"></div>
+            <span>100 mi</span>
+        </div>
+        <div class="legend-item">
+            <div class="buffer-1000"></div>
+            <span>1000 mi</span>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        let routesData = null;
+        let selectedDestination = 'all';
+        let selectedCity = null;
+        let japanMarkers = {};
+        let flightPaths = [];
+        let japanGeoJSON = null;
+        let buffer100Layer = null;
+        let buffer1000Layer = null;
+
+        const candidates = [
+            {
+                name: "Seoul",
+                country: "South Korea",
+                coords: [37.5665, 126.9780],
+                timezone: "UTC+9 (KST)",
+                timezoneDiff: 0,
+                valid: false,
+                reason: "Same timezone as Japan",
+            },
+            {
+                name: "Beijing",
+                country: "China",
+                coords: [39.9042, 116.4074],
+                timezone: "UTC+8 (CST)",
+                timezoneDiff: -1,
+                valid: true,
+                reason: "1 hour behind Japan",
+            },
+            {
+                name: "Shanghai",
+                country: "China",
+                coords: [31.2304, 121.4737],
+                timezone: "UTC+8 (CST)",
+                timezoneDiff: -1,
+                valid: true,
+                reason: "1 hour behind Japan",
+            },
+            {
+                name: "Taipei",
+                country: "Taiwan",
+                coords: [25.0330, 121.5654],
+                timezone: "UTC+8 (CST)",
+                timezoneDiff: -1,
+                valid: true,
+                reason: "1 hour behind Japan",
+            },
+            {
+                name: "Hong Kong",
+                country: "China (SAR)",
+                coords: [22.3193, 114.1694],
+                timezone: "UTC+8 (HKT)",
+                timezoneDiff: -1,
+                valid: true,
+                reason: "1 hour behind Japan",
+            },
+            {
+                name: "Manila",
+                country: "Philippines",
+                coords: [14.5995, 120.9842],
+                timezone: "UTC+8 (PST)",
+                timezoneDiff: -1,
+                valid: true,
+                reason: "1 hour behind Japan",
+            },
+            {
+                name: "Guam",
+                country: "USA (Territory)",
+                coords: [13.4443, 144.7937],
+                timezone: "UTC+10 (ChST)",
+                timezoneDiff: +1,
+                valid: true,
+                reason: "1 hour ahead of Japan",
+            },
+            {
+                name: "Vladivostok",
+                country: "Russia",
+                coords: [43.1332, 131.9113],
+                timezone: "UTC+10 (VLAT)",
+                timezoneDiff: +1,
+                valid: true,
+                reason: "1 hour ahead of Japan",
+            }
+        ];
+
+        const JAPAN_COORDS = {
+            'NRT': [35.7647, 140.3860],
+            'HND': [35.5494, 139.7798],
+            'KIX': [34.4347, 135.2441],
+            'NGO': [34.8584, 136.8124],
+            'FUK': [33.5859, 130.4512],
+            'CTS': [42.7752, 141.6924],
+            'OKA': [26.1958, 127.6459],
+            'ITM': [34.7855, 135.4380],
+            'SDJ': [38.1413, 140.9154],
+            'KOJ': [31.8034, 130.7181],
+            'NGS': [32.9180, 129.9232],
+            'KIJ': [37.9548, 139.1177],
+            'HIJ': [34.4357, 132.9196],
+            'KMQ': [36.5654, 136.6289],
+            'UKB': [34.6337, 135.1838],
+        };
+
+        const map = L.map('map', {
+            center: [32, 130],
+            zoom: 4,
+            zoomControl: true
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        const candidateMarkers = {};
+
+        candidates.forEach(city => {
+            const borderColor = city.valid ? '#00b894' : '#e94560';
+            const opacity = city.valid ? 1 : 0.5;
+
+            const icon = L.divIcon({
+                className: 'custom-marker',
+                html: `<div style="width:32px;height:32px;border-radius:50%;border:3px solid ${borderColor};box-shadow:0 2px 8px rgba(0,0,0,0.4);overflow:hidden;opacity:${opacity};"><img src="shawn-mendes.png" style="width:100%;height:100%;object-fit:cover;"></div>`,
+                iconSize: [32, 32],
+                iconAnchor: [16, 16]
+            });
+
+            const marker = L.marker(city.coords, { icon })
+                .addTo(map)
+                .bindPopup(`<strong>${city.name}</strong><br>${city.country}<br>${city.timezone}`);
+
+            marker.on('click', () => highlightCity(city.name));
+            candidateMarkers[city.name] = marker;
+        });
+
+        async function fetchRoutes() {
+            try {
+                const response = await fetch('routes.json');
+                routesData = await response.json();
+                renderDestinationButtons();
+                renderCitiesList();
+                updateMap();
+            } catch (error) {
+                console.error('Failed to load routes:', error);
+            }
+        }
+
+        async function fetchAndDrawBuffers() {
+            try {
+                const response = await fetch('https://raw.githubusercontent.com/johan/world.geo.json/master/countries/JPN.geo.json');
+                japanGeoJSON = await response.json();
+
+                const buffer100 = turf.buffer(japanGeoJSON, 100, { units: 'miles' });
+                const buffer1000 = turf.buffer(japanGeoJSON, 1000, { units: 'miles' });
+
+                buffer1000Layer = L.geoJSON(buffer1000, {
+                    style: {
+                        color: '#9b59b6',
+                        weight: 2,
+                        opacity: 0.5,
+                        fillColor: '#9b59b6',
+                        fillOpacity: 0.08,
+                        dashArray: '10, 5'
+                    }
+                }).addTo(map);
+
+                buffer100Layer = L.geoJSON(buffer100, {
+                    style: {
+                        color: '#00b894',
+                        weight: 2,
+                        opacity: 0.6,
+                        fillColor: '#00b894',
+                        fillOpacity: 0.12,
+                        dashArray: '5, 5'
+                    }
+                }).addTo(map);
+
+                const center100 = turf.centerOfMass(buffer100);
+                const center1000 = turf.centerOfMass(buffer1000);
+
+                L.marker([center100.geometry.coordinates[1], center100.geometry.coordinates[0]], {
+                    icon: L.divIcon({
+                        className: 'buffer-label',
+                        html: '<div style="background:rgba(0,184,148,0.8);color:#fff;padding:4px 8px;border-radius:4px;font-size:0.75rem;font-weight:bold;white-space:nowrap;">100 miles</div>',
+                        iconSize: [80, 24],
+                        iconAnchor: [40, 12]
+                    })
+                }).addTo(map);
+
+                L.marker([center1000.geometry.coordinates[1], center1000.geometry.coordinates[0]], {
+                    icon: L.divIcon({
+                        className: 'buffer-label',
+                        html: '<div style="background:rgba(155,89,182,0.8);color:#fff;padding:4px 8px;border-radius:4px;font-size:0.75rem;font-weight:bold;white-space:nowrap;">1000 miles</div>',
+                        iconSize: [85, 24],
+                        iconAnchor: [42, 12]
+                    })
+                }).addTo(map);
+
+            } catch (error) {
+                console.error('Failed to load Japan GeoJSON:', error);
+            }
+        }
+
+        function getCandidateRoutes(candidateName) {
+            if (!routesData) return [];
+
+            const matches = routesData.routes.filter(r => {
+                const matchCity = r.fromCity && r.fromCity.toLowerCase() === candidateName.toLowerCase();
+                if (selectedDestination === 'all') {
+                    return matchCity;
+                } else {
+                    return matchCity && r.to === selectedDestination;
+                }
+            });
+
+            const byDest = {};
+            matches.forEach(r => {
+                const key = r.to;
+                if (!byDest[key]) {
+                    byDest[key] = {
+                        to: r.to,
+                        toCity: r.toCity,
+                        toAirport: r.toAirport,
+                        airlines: [],
+                        direct: r.direct
+                    };
+                }
+                if (r.airlines) {
+                    r.airlines.forEach(a => {
+                        if (!byDest[key].airlines.includes(a)) {
+                            byDest[key].airlines.push(a);
+                        }
+                    });
+                }
+            });
+
+            return Object.values(byDest);
+        }
+
+        function hasDirectFlight(candidateName) {
+            const routes = getCandidateRoutes(candidateName);
+            return routes.length > 0 && routes.some(r => r.direct);
+        }
+
+        function getAirlinesForCandidate(candidateName, destCode = null) {
+            const routes = getCandidateRoutes(candidateName);
+            const airlines = new Set();
+            routes.forEach(r => {
+                if (!destCode || r.to === destCode) {
+                    if (r.airlines) {
+                        r.airlines.forEach(a => airlines.add(a));
+                    }
+                }
+            });
+            return Array.from(airlines);
+        }
+
+        function getDestinationsByRouteCount() {
+            if (!routesData) return [];
+
+            const counts = {};
+            routesData.routes.forEach(r => {
+                if (!counts[r.to]) {
+                    counts[r.to] = { code: r.to, city: r.toCity, count: 0 };
+                }
+                counts[r.to].count++;
+            });
+
+            return Object.values(counts).sort((a, b) => b.count - a.count);
+        }
+
+        function renderDestinationButtons() {
+            const container = document.getElementById('dest-buttons');
+            const dests = getDestinationsByRouteCount();
+
+            const buttons = [
+                { code: 'all', city: 'All Cities', count: routesData.stats.totalRoutes }
+            ].concat(dests.slice(0, 10)).map(d => `
+                <button class="dest-btn ${d.code === selectedDestination ? 'active' : ''}"
+                        onclick="selectDestination('${d.code}')">
+                    ${d.city} ${d.code !== 'all' ? `(${d.code})` : ''}<span class="count">${d.count}</span>
+                </button>
+            `);
+
+            container.innerHTML = buttons.join('');
+        }
+
+        function selectDestination(code) {
+            selectedDestination = code;
+            renderDestinationButtons();
+            renderCitiesList();
+            updateMap();
+        }
+
+        function renderCitiesList() {
+            const container = document.getElementById('cities-list');
+
+            container.innerHTML = candidates.map(city => {
+                const routes = getCandidateRoutes(city.name);
+                const hasDirect = routes.length > 0;
+                const allAirlines = getAirlinesForCandidate(city.name);
+                const destCount = routes.length;
+
+                let destinationsHtml = '';
+                if (routes.length > 0 && selectedDestination === 'all') {
+                    const topDests = routes.slice(0, 4).map(r => `${r.toCity} (${r.to})`).join(', ');
+                    const more = routes.length > 4 ? ` +${routes.length - 4} more` : '';
+                    destinationsHtml = `
+                        <div class="destinations-list">
+                            <strong>Flies to:</strong> ${topDests}${more}
+                        </div>
+                    `;
+                }
+
+                return `
+                    <div class="city-card ${city.valid ? '' : 'eliminated'} ${selectedCity === city.name ? 'selected' : ''}" onclick="highlightCity('${city.name}')">
+                        <h3>
+                            ${city.name}
+                            <span class="timezone-badge ${city.timezoneDiff === 0 ? 'same-tz' : 'different-tz'}">
+                                ${city.timezone}
+                            </span>
+                        </h3>
+                        <div class="stats">
+                            <span class="stat">${city.country}</span>
+                            ${destCount > 0 ? `<span class="stat">${destCount} route${destCount > 1 ? 's' : ''}</span>` : ''}
+                        </div>
+                        <div class="checks">
+                            ${city.timezoneDiff === 0
+                                ? '<span class="check fail">Same TZ ✗</span>'
+                                : '<span class="check">Different TZ ✓</span>'}
+                            ${hasDirect
+                                ? '<span class="check">Direct flights ✓</span>'
+                                : '<span class="check fail">No direct flights</span>'}
+                        </div>
+                        ${allAirlines.length > 0 && selectedDestination !== 'all' ? `
+                            <div class="airlines">
+                                <strong>Airlines:</strong> ${allAirlines.slice(0, 5).join(', ')}${allAirlines.length > 5 ? '...' : ''}
+                            </div>
+                        ` : ''}
+                        ${destinationsHtml}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function updateMap() {
+            Object.values(japanMarkers).forEach(m => map.removeLayer(m));
+            japanMarkers = {};
+            flightPaths.forEach(p => map.removeLayer(p));
+            flightPaths = [];
+
+            if (!routesData) return;
+
+            let destinations = [];
+            if (selectedDestination === 'all') {
+                const counts = getDestinationsByRouteCount();
+                destinations = counts.slice(0, 8).map(d => d.code);
+            } else {
+                destinations = [selectedDestination];
+            }
+
+            destinations.forEach(code => {
+                const coords = JAPAN_COORDS[code];
+                if (!coords) return;
+
+                const cityData = routesData.airports[code];
+                const cityName = cityData ? cityData.city : code;
+                const isSelected = code === selectedDestination;
+
+                const color = isSelected ? '#f39c12' : '#e94560';
+                const size = isSelected ? 20 : 14;
+
+                const icon = L.divIcon({
+                    className: 'custom-marker',
+                    html: `<div style="width:${size}px;height:${size}px;background:${color};border-radius:50%;border:2px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,0.3);"></div>`,
+                    iconSize: [size, size],
+                    iconAnchor: [size/2, size/2]
+                });
+
+                const marker = L.marker(coords, { icon })
+                    .addTo(map)
+                    .bindPopup(`<strong>${cityName}</strong><br>${code}<br>${cityData ? cityData.name : ''}`);
+
+                marker.on('click', () => {
+                    selectedCity = null;
+                    if (selectedDestination === code) {
+                        selectDestination('all');
+                    } else {
+                        selectDestination(code);
+                    }
+                });
+
+                japanMarkers[code] = marker;
+            });
+
+            candidates.forEach(city => {
+                if (selectedCity && city.name !== selectedCity) return;
+
+                const routes = getCandidateRoutes(city.name);
+
+                routes.forEach(route => {
+                    const destCoords = JAPAN_COORDS[route.to];
+                    if (!destCoords) return;
+
+                    const color = isSelectedDestination(route.to) ? '#f39c12' : (city.valid ? '#00b894' : '#636e72');
+                    const weight = isSelectedDestination(route.to) ? 3 : 1;
+                    const opacity = selectedDestination === 'all' ? 0.4 : 0.7;
+
+                    const path = L.polyline([city.coords, destCoords], {
+                        color: color,
+                        weight: weight,
+                        opacity: opacity,
+                        className: 'flight-path'
+                    }).addTo(map);
+
+                    flightPaths.push(path);
+                });
+            });
+        }
+
+        function isSelectedDestination(code) {
+            return selectedDestination === code;
+        }
+
+        function highlightCity(name) {
+            const city = candidates.find(c => c.name === name);
+            if (city) {
+                selectedDestination = 'all';
+                if (selectedCity === name) {
+                    selectedCity = null;
+                    map.setView([32, 130], 4);
+                } else {
+                    selectedCity = name;
+                    map.setView(city.coords, 5);
+                }
+                renderDestinationButtons();
+                updateMap();
+                renderCitiesList();
+                showCityInfo(city);
+            }
+        }
+
+        function showCityInfo(city) {
+            const panel = document.getElementById('info-panel');
+            document.getElementById('panel-city').textContent = city.name + ', ' + city.country;
+
+            const routes = getCandidateRoutes(city.name);
+
+            let routesHtml = '';
+            if (routes.length > 0) {
+                routesHtml = `<p style="margin-top:10px;"><strong>Direct Flights to Japan:</strong></p>`;
+
+                const routesToShow = selectedDestination === 'all' ? routes.slice(0, 10) : routes.filter(r => r.to === selectedDestination);
+
+                routesToShow.forEach(r => {
+                    const airlines = routesData.airlines;
+                    const airlineNames = r.airlines.map(code => airlines[code] || code).slice(0, 3).join(', ');
+                    routesHtml += `
+                        <p style="font-size:0.8rem;margin-left:10px;">
+                            <strong>${r.toCity}</strong> (${r.to})<br>
+                            <span style="color:#888;">${airlineNames}${r.airlines.length > 3 ? '...' : ''}</span>
+                        </p>
+                    `;
+                });
+
+                if (selectedDestination === 'all' && routes.length > 10) {
+                    routesHtml += `<p style="font-size:0.8rem;color:#888;margin-left:10px;">+${routes.length - 10} more destinations</p>`;
+                }
+            } else {
+                routesHtml = `<p style="margin-top:10px;color:#888;">No direct flights to selected destination</p>`;
+            }
+
+            document.getElementById('panel-content').innerHTML = `
+                <p><strong>Timezone:</strong> ${city.timezone}</p>
+                <p><strong>Timezone difference:</strong> ${city.timezoneDiff === 0 ? 'Same as Japan' : (city.timezoneDiff > 0 ? '+' : '') + city.timezoneDiff + ' hours from JST'}</p>
+                ${routesHtml}
+                <p style="margin-top:10px;padding:8px;background:${city.valid ? '#00b894' : '#e94560'};border-radius:4px;font-size:0.8rem;">
+                    ${city.reason}
+                </p>
+                <p class="data-source">Route data: OpenFlights.org</p>
+            `;
+
+            panel.classList.add('visible');
+        }
+
+        function closeInfo() {
+            document.getElementById('info-panel').classList.remove('visible');
+        }
+
+        fetchRoutes();
+        fetchAndDrawBuffers();
+    </script>
+</body>
+</html>
