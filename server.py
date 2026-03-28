@@ -11,7 +11,7 @@ app = modal.App("cci-2026.1-wk04d2-people-in-space")
 
 here = Path(__file__).parent
 
-image = modal.Image.debian_slim().add_local_dir(here, "/root/")
+image = modal.Image.debian_slim().add_local_dir(here, "/root/").add_local_dir(here / "music", "/root/music")
 
 @app.cls(region=REGION, image=image, min_containers=1)
 @modal.experimental.http_server(port=PORT, proxy_regions=[PROXY_REGION])
