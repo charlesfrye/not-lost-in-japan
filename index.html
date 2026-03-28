@@ -305,8 +305,21 @@
             border-radius: 50%;
         }
 
-        .dot-japan {
+        .dot-japan-flag {
+            width: 14px;
+            height: 14px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dot-japan-flag::after {
+            content: '';
+            width: 8px;
+            height: 8px;
             background: #e94560;
+            border-radius: 50%;
         }
 
         .dot-different {
@@ -411,11 +424,7 @@
 
     <div class="legend">
         <div class="legend-item">
-            <div class="legend-dot dot-destination"></div>
-            <span>Selected</span>
-        </div>
-        <div class="legend-item">
-            <div class="legend-dot dot-japan"></div>
+            <div class="dot-japan-flag"></div>
             <span>Japan</span>
         </div>
         <div class="legend-item">
@@ -464,8 +473,8 @@
                 coords: [39.9042, 116.4074],
                 timezone: "UTC+8 (CST)",
                 timezoneDiff: -1,
-                valid: true,
-                reason: "1 hour behind Japan",
+                valid: false,
+                reason: "Too far from Japan (>500 miles)",
             },
             {
                 name: "Shanghai",
@@ -491,8 +500,8 @@
                 coords: [22.3193, 114.1694],
                 timezone: "UTC+8 (HKT)",
                 timezoneDiff: -1,
-                valid: true,
-                reason: "1 hour behind Japan",
+                valid: false,
+                reason: "Too far from Japan (>500 miles)",
             },
             {
                 name: "Manila",
@@ -500,8 +509,8 @@
                 coords: [14.5995, 120.9842],
                 timezone: "UTC+8 (PST)",
                 timezoneDiff: -1,
-                valid: true,
-                reason: "1 hour behind Japan",
+                valid: false,
+                reason: "Too far from Japan (>500 miles)",
             },
             {
                 name: "Guam",
@@ -509,8 +518,8 @@
                 coords: [13.4443, 144.7937],
                 timezone: "UTC+10 (ChST)",
                 timezoneDiff: +1,
-                valid: true,
-                reason: "1 hour ahead of Japan",
+                valid: false,
+                reason: "Too far from Japan (>500 miles)",
             },
             {
                 name: "Vladivostok",
@@ -791,11 +800,12 @@
                 const isSelected = code === selectedDestination;
 
                 const color = isSelected ? '#f39c12' : '#e94560';
-                const size = isSelected ? 20 : 14;
+                const size = isSelected ? 16 : 12;
+                const circleSize = isSelected ? 12 : 8;
 
                 const icon = L.divIcon({
                     className: 'custom-marker',
-                    html: `<div style="width:${size}px;height:${size}px;background:${color};border-radius:50%;border:2px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,0.3);"></div>`,
+                    html: `<div style="width:${size}px;height:${size}px;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;"><div style="width:${circleSize}px;height:${circleSize}px;background:${color};border-radius:50%;"></div></div>`,
                     iconSize: [size, size],
                     iconAnchor: [size/2, size/2]
                 });
@@ -818,6 +828,7 @@
 
             candidates.forEach(city => {
                 if (selectedCity && city.name !== selectedCity) return;
+                if (!city.valid) return;
 
                 const routes = getCandidateRoutes(city.name);
 
