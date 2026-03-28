@@ -297,7 +297,7 @@
         /* ============================================
            BUTTONS
            ============================================ */
-        #play-btn {
+        .play-btn {
             position: absolute;
             top: 50%;
             right: 10px;
@@ -313,12 +313,12 @@
             line-height: 1;
         }
 
-        #play-btn:hover {
+        .play-btn:hover {
             background: #e94560;
             color: #fff;
         }
 
-        #play-btn.playing {
+        .play-btn.playing {
             background: #f39c12;
             border-color: #f39c12;
             color: #fff;
@@ -413,17 +413,251 @@
             stroke-dasharray: 10, 10;
             animation: dash 1s linear infinite;
         }
+
+        /* ============================================
+           MOBILE TOGGLE BUTTON
+           ============================================ */
+        #mobile-toggle {
+            display: none;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1500;
+            background: #e94560;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            min-height: 44px;
+        }
+
+        .mobile-only {
+            display: none;
+        }
+
+        #mobile-header {
+            display: none;
+        }
+
+        .close-sidebar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 8px;
+            min-width: 44px;
+            min-height: 44px;
+        }
+
+        /* ============================================
+           RESPONSIVE BREAKPOINTS
+           ============================================ */
+        
+        /* Tablet (481px - 768px) */
+        @media (max-width: 768px) {
+            #sidebar {
+                width: 300px;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            .subtitle {
+                font-size: 0.8rem;
+            }
+
+            .dest-btn {
+                padding: 10px 14px;
+                font-size: 0.75rem;
+                min-height: 44px;
+            }
+
+            .city-card {
+                padding: 12px;
+                min-height: 80px;
+            }
+
+            .play-btn {
+                padding: 10px 14px;
+                font-size: 0.85rem;
+            }
+
+            .close-btn {
+                padding: 10px;
+                font-size: 1.5rem;
+                min-width: 44px;
+                min-height: 44px;
+            }
+        }
+
+        /* Mobile (< 480px) */
+        @media (max-width: 480px) {
+            body {
+                flex-direction: column;
+            }
+
+            #mobile-toggle {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                top: 10px;
+                left: 10px;
+            }
+
+            #mobile-header {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1500;
+                background: #16213e;
+                padding: 15px 20px;
+                border-top: 1px solid #0f3460;
+                align-items: center;
+                justify-content: space-between;
+                gap: 15px;
+            }
+
+            #mobile-header h1 {
+                font-size: 1rem;
+                margin: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            #mobile-header .play-btn {
+                position: static;
+                transform: none;
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+
+            .mobile-only {
+                display: block;
+            }
+
+            /* Hide title and lyric in sidebar on mobile */
+            #sidebar > h1,
+            #sidebar > .subtitle,
+            #sidebar > .lyric {
+                display: none;
+            }
+
+            #sidebar {
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+                position: absolute;
+                bottom: 70px;
+                left: 0;
+                z-index: 1000;
+                transition: height 0.3s ease;
+                padding: 0;
+                border-right: none;
+                border-top: 1px solid #0f3460;
+            }
+
+            #sidebar.open {
+                height: 60vh;
+                padding: 20px;
+                padding-top: 50px;
+                overflow-y: auto;
+            }
+
+            #map {
+                height: 100vh;
+                width: 100vw;
+                padding-bottom: 70px;
+            }
+
+            .info-panel {
+                top: auto;
+                bottom: 70px;
+                right: 0;
+                left: 0;
+                max-width: 100%;
+                border-radius: 8px 8px 0 0;
+                z-index: 1100;
+            }
+
+            .legend {
+                bottom: 70px;
+                left: 0;
+                right: 0;
+                transform: none;
+                width: 100%;
+                border-radius: 0;
+            }
+
+            /* Hide legend when sidebar is open */
+            #sidebar.open ~ .legend {
+                display: none;
+            }
+
+            /* Adjust Leaflet controls position */
+            .leaflet-top {
+                top: 60px;
+            }
+
+            .leaflet-bottom {
+                bottom: 80px;
+            }
+
+            .leaflet-control-attribution {
+                display: none !important;
+            }
+
+            /* Touch-friendly targets */
+            .dest-btn {
+                min-height: 44px;
+                font-size: 0.85rem;
+            }
+
+            .city-card {
+                min-height: 100px;
+                padding: 14px;
+            }
+
+            .play-btn {
+                min-width: 44px;
+                min-height: 44px;
+            }
+
+            .close-btn {
+                min-width: 44px;
+                min-height: 44px;
+            }
+        }
     </style>
 </head>
 <body>
+    <button id="mobile-toggle" onclick="toggleMobileSidebar()">☰ About</button>
+    
+    <div id="mobile-header">
+        <h1>Where is Shawn Mendes?</h1>
+        <button class="play-btn" onclick="toggleMusic()" title="Play music">▶</button>
+    </div>
+
     <div id="sidebar">
+        <button class="mobile-only close-sidebar" onclick="toggleMobileSidebar()">×</button>
         <h1>Where is Shawn Mendes?</h1>
         <p class="subtitle">A data-driven investigation</p>
 
         <div class="lyric">
             I got an idea<br>
             And I know that it sounds crazy
-            <button id="play-btn" onclick="toggleMusic()" title="Play music">▶</button>
+            <button class="play-btn" onclick="toggleMusic()" title="Play music">▶</button>
         </div>
 
         <div class="constraints">
@@ -963,6 +1197,7 @@
             renderDestinationButtons();
             renderCitiesList();
             updateMap();
+            closeMobileSidebar();
         }
 
         function highlightCity(name) {
@@ -980,6 +1215,7 @@
                 updateMap();
                 renderCitiesList();
                 showCityInfo(city);
+                closeMobileSidebar();
             }
         }
 
@@ -1046,8 +1282,6 @@
         }
 
         async function playMusic() {
-            const btn = document.getElementById('play-btn');
-
             if (!midi) {
                 const loaded = await loadMidi();
                 if (!loaded) return;
@@ -1079,19 +1313,25 @@
 
             Tone.Transport.start();
             isPlaying = true;
-            btn.textContent = '⏸';
-            btn.classList.add('playing');
+            
+            // Update all play buttons
+            document.querySelectorAll('.play-btn').forEach(btn => {
+                btn.textContent = '⏸';
+                btn.classList.add('playing');
+            });
         }
 
         function stopMusic() {
-            const btn = document.getElementById('play-btn');
-
             Tone.Transport.stop();
             synths.forEach(s => s.dispose());
             synths = [];
             isPlaying = false;
-            btn.textContent = '▶';
-            btn.classList.remove('playing');
+            
+            // Update all play buttons
+            document.querySelectorAll('.play-btn').forEach(btn => {
+                btn.textContent = '▶';
+                btn.classList.remove('playing');
+            });
         }
 
         async function toggleMusic() {
@@ -1117,6 +1357,47 @@
                 }, { once: true });
             }
         }
+
+        /* ============================================
+           MOBILE RESPONSIVENESS
+           ============================================ */
+        function toggleMobileSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const toggleBtn = document.getElementById('mobile-toggle');
+
+            sidebar.classList.toggle('open');
+
+            if (sidebar.classList.contains('open')) {
+                toggleBtn.textContent = '✕ Close';
+            } else {
+                toggleBtn.textContent = '☰ About';
+            }
+        }
+
+        function closeMobileSidebar() {
+            if (window.innerWidth < 480) {
+                const sidebar = document.getElementById('sidebar');
+                const toggleBtn = document.getElementById('mobile-toggle');
+                sidebar.classList.remove('open');
+                toggleBtn.textContent = '☰ About';
+            }
+        }
+
+        // Map click handler to close sidebar on mobile
+        map.on('click', () => {
+            closeMobileSidebar();
+        });
+
+        // Window resize handler
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 480) {
+                const sidebar = document.getElementById('sidebar');
+                const toggleBtn = document.getElementById('mobile-toggle');
+                sidebar.classList.remove('open');
+                toggleBtn.textContent = '☰ About';
+                sidebar.style.height = '';
+            }
+        });
 
         /* ============================================
            INITIALIZATION
