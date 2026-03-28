@@ -95,6 +95,11 @@
             color: #fff;
         }
 
+        .constraints h2 a {
+            color: #fff;
+            text-decoration: none;
+        }
+
         .constraint {
             background: #1a1a2e;
             padding: 10px;
@@ -473,7 +478,7 @@
         /* ============================================
            RESPONSIVE BREAKPOINTS
            ============================================ */
-        
+
         /* Tablet (481px - 768px) */
         @media (max-width: 768px) {
             #sidebar {
@@ -657,7 +662,7 @@
 </head>
 <body>
     <button id="mobile-toggle" onclick="toggleMobileSidebar()">☰ About</button>
-    
+
     <div id="mobile-header">
         <h1>Where is Shawn Mendes?</h1>
         <button class="play-btn" onclick="toggleMusic()" title="Play music">▶</button>
@@ -675,7 +680,7 @@
         </div>
 
         <div class="constraints">
-            <h2>Constraints</h2>
+            <h2><a href="https://genius.com/14147648">Lyrical Constraints</a></h2>
 
             <div class="constraint">
                 <strong>"One flight, we'd be in the same time zone"</strong><br>
@@ -1327,7 +1332,7 @@
 
             Tone.Transport.start();
             isPlaying = true;
-            
+
             // Update all play buttons
             document.querySelectorAll('.play-btn').forEach(btn => {
                 btn.textContent = '⏸';
@@ -1340,7 +1345,7 @@
             synths.forEach(s => s.dispose());
             synths = [];
             isPlaying = false;
-            
+
             // Update all play buttons
             document.querySelectorAll('.play-btn').forEach(btn => {
                 btn.textContent = '▶';
